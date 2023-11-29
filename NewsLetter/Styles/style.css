@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    font-family: "Roboto", sans-serif;
+}
+
+.inactive {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    padding: 20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 35px;
+    box-shadow: 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+picture {
+    width: 50%;
+}
+
+picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+.register-container {
+    max-width: 450px;
+    padding: 70px 40px;
+}
+
+.register-container h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.register-container p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: hsl(235, 18%, 26%);
+    margin-bottom: 40px;
+}
+
+.register-container ul {
+    list-style: none;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+}
+
+.register-container ul li {
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-list {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/images/icon-list.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.form-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 35px;
+    margin-bottom: 10px;
+}
+
+.form-labels span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: red;
+}
+
+.form-incorrect {
+    background-color: rgb(255, 201, 201);
+    color: red;
+    border: 1px solid red;
+}
+
+.label-form {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+}
+
+.email-input {
+    width: 90%;
+    height: 15px;
+    font-size: 1.4rem;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.suscribe-btn {
+    width: 90%;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.suscribe-btn:hover {
+    background: linear-gradient(
+        90deg,
+        hsl(234, 29%, 20%) -700px,
+        hsl(4, 100%, 67%) 100%
+    );
+    box-shadow: 2px 5px 10px;
+}
+
+.successful-subscription {
+    position: absolute;
+    width: 370px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    top: 20%;
+}
+
+.successful-subscription img {
+    width: 40px;
+    margin-bottom: 30px;
+}
+
+.title-successful {
+    font-size: 4rem;
+    font-weight: bold;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 20px;
+}
+
+.successful-subscription p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: hsl(235, 18%, 26%);
+    margin-bottom: 40px;
+}
+
+.dismiss-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Media Query's */
+@media (max-width: 730px) {
+    .container {
+        margin: 0;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    picture {
+        width: 100%;
+        height: 300px;
+    }
+
+    .register-container {
+        padding: 40px 20px;
+    }
+
+    .register-container h1 {
+        font-size: 3rem;
+    }
+
+    .register-container p {
+        font-size: 1.4rem;
+    }
+
+    .register-container ul {
+        font-size: 1.2rem;
+    }
+
+    .label-form {
+        font-size: 1.2rem;
+    }
+
+    .email-input {
+        font-size: 1.2rem;
+    }
+
+    .suscribe-btn {
+        font-size: 1.2rem;
+    }
+
+    .successful-subscription {
+        width: 300px;
+        padding: 20px;
+    }
+
+    .title-successful {
+        font-size: 3rem;
+    }
+
+    .successful-subscription p {
+        font-size: 1rem;
+    }
+
+    .dismiss-btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .successful-subscription {
+        width: 250px;
+    }
+
+    .title-successful {
+        font-size: 2rem;
+    }
+
+    .successful-subscription p {
+        font-size: 1rem;
+    }
+
+    .dismiss-btn {
+        font-size: 1rem;
+    }
+}

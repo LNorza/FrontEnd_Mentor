@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
+
+    <title>Age calculator app</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body>
+
+    <section class="main-container">
+        <div class="input-data-container">
+            <div class="inputs">
+                <label id="label-day" for="day">Day</label>
+                <input type="text" id="day" placeholder="DD">
+                <p class="day-p inactive">Must be a valid Day</p>
+            </div>
+
+            <div class="inputs">
+                <label id="label-month" for="month">Month</label>
+                <input type="text" id="month" placeholder="MM">
+                <p class="month-p inactive">Must be a valid Month</p>
+            </div>
+
+            <div class="inputs">
+                <label id="label-year" for="year">Year</label>
+                <input type="text" id="year" placeholder="YYYY">
+                <p class="year-p inactive">Must be a valid Year</p>
+            </div>
+        </div>
+
+        <div class="age-result-container">
+            <button class="icon-container">
+                <img class="icon-purple" src="assets/images/icon-arrow.svg"></img>
+            </button>
+
+            <div class="results-container">
+                <p><span id="years">--</span> Years</p>
+                <p><span id="months">--</span> Months</p>
+                <p><span id="days">--</span> Days</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="Js/script.js"></script>
+</body>
+
+</html>
