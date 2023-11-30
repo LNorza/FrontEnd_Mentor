@@ -13,6 +13,8 @@ btnSubmit.addEventListener("click", function () {
     if (validateEmail.test(email)) {
         mainContainer.style.display = "none";
         successMessage.classList.remove("inactive");
+        emailInput.classList.remove("form-incorrect");
+        spanError.classList.add("inactive");
     } else {
         /* Validate the input is not empty */
         if (email.trim() === "") {
@@ -22,7 +24,6 @@ btnSubmit.addEventListener("click", function () {
         if (!validateEmail.test(email)) {
             emailInput.classList.add("form-incorrect");
             spanError.classList.remove("inactive");
-
             emailInput.value = "";
         } else {
             emailInput.classList.remove("form-incorrect");
